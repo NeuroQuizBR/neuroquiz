@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -10,47 +11,127 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#"><span class="brand-mark">N</span> neuro<span>quiz</span></a>
-    <nav><a href="#categorias">Quizzes</a><a href="#como-funciona">Como funciona</a></nav>
+    <nav>
+      <a href="#categorias">Quizzes</a>
+      <a href="#como-funciona">Como funciona</a>
+    </nav>
     <button class="outline" id="accountBtn">Entrar / Criar conta</button>
   </header>
+
   <main>
     <section class="hero">
       <div class="eyebrow"><span class="pulse"></span> SUA MENTE, SEM LIMITES</div>
       <h1>Descubra até onde<br><span> sua mente pode ir.</span></h1>
       <p>Desafie seu raciocínio, amplie seus conhecimentos e descubra novas formas de pensar.</p>
       <a class="primary" href="#categorias">Explorar quizzes <span>↗</span></a>
-      <div class="hero-stats"><div><b>04</b><small>categorias iniciais</small></div><div><b>∞</b><small>possibilidades de aprender</small></div><div><b>100%</b><small>foco no conhecimento</small></div></div>
-      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+      <div class="hero-stats">
+        <div><b>04</b><small>categorias iniciais</small></div>
+        <div><b>∞</b><small>possibilidades de aprender</small></div>
+        <div><b>100%</b><small>foco no conhecimento</small></div>
+      </div>
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
     </section>
+
     <section class="section" id="categorias">
-      <div class="section-head"><div><div class="eyebrow">ESCOLHA SEU DESAFIO</div><h2>Explore sua mente</h2></div><span class="muted">Quizzes para evoluir a cada tentativa</span></div>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">ESCOLHA SEU DESAFIO</div>
+          <h2>Explore sua mente</h2>
+        </div>
+        <span class="muted">Quizzes para evoluir a cada tentativa</span>
+      </div>
+
       <div class="cards">
-        <article class="quiz-card" data-quiz="logica"><div class="card-icon">⌘</div><div class="tag">RACIOCÍNIO</div><h3>Lógica & padrões</h3><p>Encontre relações, resolva problemas e desafie sua capacidade de análise.</p><button class="card-button">Começar desafio <span>→</span></button></article>
-        <article class="quiz-card" data-quiz="geral"><div class="card-icon">◎</div><div class="tag">CONHECIMENTO</div><h3>Conhecimentos gerais</h3><p>Teste o que você sabe sobre ciência, história, cultura e mundo.</p><button class="card-button">Começar desafio <span>→</span></button></article>
-        <article class="quiz-card" data-quiz="psico"><div class="card-icon">◈</div><div class="tag">PSICOLOGIA</div><h3>Mente & comportamento</h3><p>Aprenda sobre memória, vieses cognitivos e comportamento humano.</p><button class="card-button">Começar desafio <span>→</span></button></article>
-        <article class="quiz-card" data-quiz="decisao"><div class="card-icon">⌁</div><div class="tag">PENSAMENTO</div><h3>Decisão & estratégia</h3><p>Pratique análise de cenários, probabilidades e tomada de decisão.</p><button class="card-button">Começar desafio <span>→</span></button></article>
+        <article class="quiz-card" data-quiz="logica">
+          <div class="card-icon">⌘</div><div class="tag">RACIOCÍNIO</div>
+          <h3>Lógica & padrões</h3>
+          <p>Encontre relações, resolva problemas e desafie sua capacidade de análise.</p>
+          <button class="card-button">Começar desafio <span>→</span></button>
+        </article>
+        <article class="quiz-card" data-quiz="geral">
+          <div class="card-icon">◎</div><div class="tag">CONHECIMENTO</div>
+          <h3>Conhecimentos gerais</h3>
+          <p>Teste o que você sabe sobre ciência, história, cultura e mundo.</p>
+          <button class="card-button">Começar desafio <span>→</span></button>
+        </article>
+        <article class="quiz-card" data-quiz="psico">
+          <div class="card-icon">◈</div><div class="tag">PSICOLOGIA</div>
+          <h3>Mente & comportamento</h3>
+          <p>Aprenda sobre memória, vieses cognitivos e comportamento humano.</p>
+          <button class="card-button">Começar desafio <span>→</span></button>
+        </article>
+        <article class="quiz-card" data-quiz="decisao">
+          <div class="card-icon">⌁</div><div class="tag">PENSAMENTO</div>
+          <h3>Decisão & estratégia</h3>
+          <p>Pratique análise de cenários, probabilidades e tomada de decisão.</p>
+          <button class="card-button">Começar desafio <span>→</span></button>
+        </article>
       </div>
     </section>
-    <section class="how" id="como-funciona"><div class="eyebrow">SUA JORNADA</div><h2>Aprender também é um desafio.</h2><p>Responda, veja sua pontuação e acompanhe sua evolução. Os resultados deste protótipo ficam salvos neste navegador.</p></section>
+
+    <section class="how" id="como-funciona">
+      <div class="eyebrow">SUA JORNADA</div>
+      <h2>Aprender também é um desafio.</h2>
+      <p>Responda, veja sua pontuação e acompanhe sua evolução. Entre na sua conta para salvar seus resultados e acessá-los em outros dispositivos.</p>
+    </section>
+
     <footer>NEUROQUIZ <span>•</span> DESAFIE SUA MENTE <small>Projeto em desenvolvimento</small></footer>
   </main>
 
-  <div class="modal-backdrop" id="quizModal" aria-hidden="true"><section class="modal">
-    <button class="close" id="closeQuiz" aria-label="Fechar">×</button>
-    <div class="eyebrow" id="quizCategory">DESAFIO</div><div class="progress"><i id="progressBar"></i></div>
-    <div class="muted" id="questionCount"></div><h2 id="questionText"></h2><div id="answers" class="answers"></div>
-    <div id="feedback" class="feedback" aria-live="polite"></div><button id="nextQuestion" class="primary full" disabled>Confirmar resposta</button>
-  </section></div>
+  <div class="modal-backdrop" id="quizModal" aria-hidden="true">
+    <section class="modal">
+      <button class="close" id="closeQuiz" aria-label="Fechar">×</button>
+      <div class="eyebrow" id="quizCategory">DESAFIO</div>
+      <div class="progress"><i id="progressBar"></i></div>
+      <div class="muted" id="questionCount"></div>
+      <h2 id="questionText"></h2>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <button id="nextQuestion" class="primary full" disabled>Confirmar resposta</button>
+    </section>
+  </div>
 
-  <div class="modal-backdrop" id="accountModal" aria-hidden="true"><section class="modal account-modal">
-    <button class="close" id="closeAccount" aria-label="Fechar">×</button>
-    <div class="eyebrow">ÁREA PESSOAL</div><h2>Seu perfil Neuroquiz</h2>
-    <p class="muted">Nesta versão inicial, o perfil é salvo somente neste dispositivo. A conexão com cadastro seguro e sincronização entre dispositivos será ativada na etapa do Supabase.</p>
-    <label>Como podemos te chamar?<input id="displayName" placeholder="Seu nome"></label>
-    <button id="saveProfile" class="primary full">Salvar perfil neste dispositivo</button>
-    <div id="profileStatus" class="feedback"></div>
-    <div class="profile-history" id="profileHistory"></div>
-  </section></div>
+  <div class="modal-backdrop" id="accountModal" aria-hidden="true">
+    <section class="modal account-modal">
+      <button class="close" id="closeAccount" aria-label="Fechar">×</button>
+      <div class="eyebrow">ÁREA PESSOAL</div>
+      <h2>Seu perfil Neuroquiz</h2>
+
+      <div id="authForm">
+        <p class="muted">Crie sua conta ou entre para salvar seu progresso e acompanhar sua evolução.</p>
+
+        <label>E-mail
+          <input id="authEmail" type="email" placeholder="seuemail@exemplo.com" autocomplete="email">
+        </label>
+
+        <label>Senha
+          <input id="authPassword" type="password" placeholder="Mínimo de 6 caracteres" autocomplete="current-password">
+        </label>
+
+        <label>Seu nome
+          <input id="displayName" type="text" placeholder="Como podemos te chamar?" autocomplete="name">
+        </label>
+
+        <button id="loginBtn" class="primary full" type="button">Entrar</button>
+        <button id="signupBtn" class="outline full" type="button">Criar minha conta</button>
+      </div>
+
+      <div id="loggedArea" hidden>
+        <p class="muted" id="loggedUser"></p>
+        <label>Nome do perfil
+          <input id="profileName" type="text" placeholder="Seu nome">
+        </label>
+        <button id="saveProfile" class="primary full" type="button">Salvar perfil</button>
+        <button id="logoutBtn" class="outline full" type="button">Sair da conta</button>
+      </div>
+
+      <div id="profileStatus" class="feedback" aria-live="polite"></div>
+      <div class="profile-history" id="profileHistory"></div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>
 </html>
