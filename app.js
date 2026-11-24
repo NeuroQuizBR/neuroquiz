@@ -379,10 +379,28 @@ function openAccount() {
   updateAccountView();
 }
 
-function closeAccount() {
-  $("accountModal").classList.remove("open");
-  $("accountModal").setAttribute("aria-hidden", "true");
-}
+
+const accountCloseButton = $("closeAccount");
+
+accountCloseButton.textContent = "×";
+
+accountCloseButton.style.cssText = `
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: #10172a !important;
+  color: #59e1ee !important;
+  border: 1px solid #59e1ee !important;
+  font-size: 30px !important;
+  cursor: pointer !important;
+`;
 
 // ========================================
 // ABRIR E FECHAR QUIZ
