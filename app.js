@@ -347,9 +347,33 @@ function renderProgress(xp, unlocked = []) {
 // ABRIR E FECHAR CONTA
 // ========================================
 
+
 function openAccount() {
   $("accountModal").classList.add("open");
   $("accountModal").setAttribute("aria-hidden", "false");
+
+  const closeBtn = $("closeAccount");
+
+  closeBtn.textContent = "×";
+
+  closeBtn.style.cssText = `
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    z-index: 99999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #59e1ee;
+    background: #10172a;
+    color: #59e1ee;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
 
   showStatus("");
   updateAccountView();
